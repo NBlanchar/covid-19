@@ -63,4 +63,9 @@ print(f'El orden de los tipos de atención es: \n{Resultado}')
 
 # Ejercicio 11
 Resultado = data['Nombre departamento'].value_counts().head(10)
-print(f'El orden de los departamentos con mas contagio es: \n{Resultado}')
+print(f'El orden de los departamentos con mas contagios es: \n{Resultado}')
+
+# Ejercicio 12
+fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
+Resultado = fallecidos['Nombre departamento'].value_counts().head(10)
+print(f'El orden de los departamentos con mas fallecidos es: \n{Resultado}')
