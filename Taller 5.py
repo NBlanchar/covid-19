@@ -47,13 +47,16 @@ print(f'El numero de personas fallecidas son: {Resultado:,}')
 
 # Ejercicio 7
 Resultado = data['Tipo de contagio'].value_counts()
-print(f'El orden de los tipos ds contagio es: \n{Resultado}')
+print(f'El orden de los tipos de contagio es: \n{Resultado}')
 
 # Ejercicio 8
-data.columns
 Resultado = data.groupby('Nombre departamento').size().shape[0]
 print(f"El numero de departamentos afectados es: {Resultado:,}")
 
 # Ejercico 9
 Resultado = data.groupby('Nombre departamento').size()
 print(f"Los departamentos afectados son: \n{Resultado}")
+
+# Ejercicio 10
+Resultado = data['Estado'].value_counts()
+print(f'El orden de los tipos de atención es: \n{Resultado}')
