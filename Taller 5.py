@@ -23,10 +23,13 @@ for x in range(len(prueba)):
 print(f'El numero de casos de contagiados en el pais es: {data.shape[0]-1:,}')
 
 # Ejercicio 2
-MAfectados = data.groupby('Nombre municipio').size().shape[0]
-print(f"El numero de municipios afectados es: {MAfectados:,}")
+MunicipiosAfectados = data.groupby('Nombre municipio').size().shape[0]
+print(f"El numero de municipios afectados es: {MunicipiosAfectados:,}")
 
 # Ejercico 3
-MAfectados = data.groupby('Nombre municipio').size()
-print(f"Los municipios afectados son: \n {MAfectados}")
-    
+MunicipiosAfectados = data.groupby('Nombre municipio').size()
+print(f"Los municipios afectados son: \n {MunicipiosAfectados}")
+
+# Ejercicio 4
+AtencionCasa = data[(data['Ubicación del caso'] == 'CASA')].shape[0]
+print(f'El numero de personas que son atendidas en casa son: {AtencionCasa:,}')
