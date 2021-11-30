@@ -60,3 +60,7 @@ print(f"Los departamentos afectados son: \n{Resultado}")
 # Ejercicio 10
 Resultado = data['Estado'].value_counts()
 print(f'El orden de los tipos de atención es: \n{Resultado}')
+
+# Ejercicio 11
+Resultado = data['Nombre departamento'].value_counts().head(10)
+print(f'El orden de los departamentos con mas contagio es: \n{Resultado}')
