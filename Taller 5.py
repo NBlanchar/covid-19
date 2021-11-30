@@ -82,4 +82,9 @@ print(f'El orden de los municipios con mas contagios es: \n{Resultado}')
 # Ejercicio 15
 fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
 Resultado = fallecidos['Nombre municipio'].value_counts().head(10)
-print(f'El orden de los departamentos con mas fallecidos es: \n{Resultado}')
+print(f'El orden de los municipios con mas fallecidos es: \n{Resultado}')
+
+# Ejercicio 16
+recuperados = data[(data['Recuperado'] == 'RECUPERADO')]
+Resultado = recuperados['Nombre departamento'].value_counts().head(10)
+print(f'El orden de los municipios con mas recuperados es: \n{Resultado}')
