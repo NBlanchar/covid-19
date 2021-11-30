@@ -53,3 +53,7 @@ print(f'El orden de los tipos ds contagio es: \n{Resultado}')
 data.columns
 Resultado = data.groupby('Nombre departamento').size().shape[0]
 print(f"El numero de departamentos afectados es: {Resultado:,}")
+
+# Ejercico 9
+Resultado = data.groupby('Nombre departamento').size()
+print(f"Los departamentos afectados son: \n{Resultado}")
