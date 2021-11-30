@@ -19,3 +19,5 @@ for x in range(len(prueba)):
         data[prueba[x]] = data[prueba[x]].str.upper()
 
 
+# Ejercicio 1
+print(f'El numero de casos de contagiados en el pais es: {data.shape[0]-1}')
