@@ -17,7 +17,10 @@ for x in range(len(TD)):
     c = 'Pertenencia étnica'
     if(TD[x] != a and TD[x] != b and TD[x] != c):
         data[TD[x]] = data[TD[x]].str.upper()
-
+data['Nombre departamento'].replace('BARRANQUILLA', 'ATLANTICO', inplace = True)
+data['Nombre departamento'].replace('CARTAGENA', 'BOLIVAR', inplace = True)
+data['Nombre departamento'].replace('STA MARTA D.E.', 'MAGDALENA', inplace = True)
+data['Nombre departamento'].replace('BOGOTA', 'CUNDINAMARCA', inplace = True)
 
 # Ejercicio 1
 print(f'El numero de casos de contagiados en el pais es: {data.shape[0]-1:,}')
@@ -45,3 +48,8 @@ print(f'El numero de personas fallecidas son: {Resultado:,}')
 # Ejercicio 7
 Resultado = data['Tipo de contagio'].value_counts()
 print(f'El orden de los tipos ds contagio es: \n{Resultado}')
+
+# Ejercicio 8
+data.columns
+Resultado = data.groupby('Nombre departamento').size().shape[0]
+print(f"El numero de departamentos afectados es: {Resultado:,}")
