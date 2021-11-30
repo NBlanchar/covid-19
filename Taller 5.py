@@ -28,7 +28,7 @@ print(f"El numero de municipios afectados es: {Resultado:,}")
 
 # Ejercico 3
 Resultado = data.groupby('Nombre municipio').size()
-print(f"Los municipios afectados son: \n {Resultado}")
+print(f"Los municipios afectados son: \n{Resultado}")
 
 # Ejercicio 4
 Resultado = data[(data['Ubicación del caso'] == 'CASA')].shape[0]
@@ -41,3 +41,7 @@ print(f'El numero de personas que son atendidas en casa son: {Resultado:,}')
 # Ejercicio 6
 Resultado = data[(data['Recuperado'] == 'FALLECIDO')].shape[0]
 print(f'El numero de personas fallecidas son: {Resultado:,}')
+
+# Ejercicio 7
+Resultado = data['Tipo de contagio'].value_counts()
+print(f'El orden de los tipos ds contagio es: \n{Resultado}')
