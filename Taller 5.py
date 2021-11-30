@@ -10,13 +10,13 @@ url = 'covid_22_noviembre.csv'
 data = pd.read_csv(url)
 
 # Tratamiento de Datos
-prueba = data.columns
-for x in range(len(prueba)):
+TD = data.columns
+for x in range(len(TD)):
     a = 'Edad'
     b = 'Unidad de medida de edad'
     c = 'Pertenencia étnica'
-    if(prueba[x] != a and prueba[x] != b and prueba[x] != c):
-        data[prueba[x]] = data[prueba[x]].str.upper()
+    if(TD[x] != a and TD[x] != b and TD[x] != c):
+        data[TD[x]] = data[TD[x]].str.upper()
 
 
 # Ejercicio 1
@@ -38,4 +38,6 @@ print(f'El numero de personas que son atendidas en casa son: {Resultado:,}')
 Resultado = data[(data['Recuperado'] == 'RECUPERADO')].shape[0]
 print(f'El numero de personas que son atendidas en casa son: {Resultado:,}')
 
-data.groupby('Recuperado').size()
+# Ejercicio 6
+Resultado = data[(data['Recuperado'] == 'FALLECIDO')].shape[0]
+print(f'El numero de personas fallecidas son: {Resultado:,}')
