@@ -74,3 +74,7 @@ print(f'El orden de los departamentos con mas fallecidos es: \n{Resultado}')
 recuperados = data[(data['Recuperado'] == 'RECUPERADO')]
 Resultado = recuperados['Nombre departamento'].value_counts().head(10)
 print(f'El orden de los departamentos con mas recuperados es: \n{Resultado}')
+
+# Ejercicio 14
+Resultado = data['Nombre municipio'].value_counts().head(10)
+print(f'El orden de los municipios con mas contagios es: \n{Resultado}')
