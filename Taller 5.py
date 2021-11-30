@@ -110,3 +110,7 @@ print(f'El promedio de edad en los municipios es: \n{Resultado}')
 # Ejercicio 20
 Resultado = data['Nombre del país'].value_counts()
 print(f'El orden de contagiados segun su procedencia es: \n{Resultado}')
+
+# Ejercicio 21
+Resultado = data['Fecha de notificación'].value_counts()
+print(f'las fechas donde se presentaron mas contagios so: \n{Resultado}')
