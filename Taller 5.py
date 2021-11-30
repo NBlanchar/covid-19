@@ -20,4 +20,8 @@ for x in range(len(prueba)):
 
 
 # Ejercicio 1
-print(f'El numero de casos de contagiados en el pais es: {data.shape[0]-1}')
+print(f'El numero de casos de contagiados en el pais es: {data.shape[0]-1:,}')
+
+# Ejercicio 2
+MAfectados = data.groupby('Nombre municipio').size().shape[0]
+print(f"El numero de municipios afectados es: {MAfectados:,}")
