@@ -92,3 +92,10 @@ print(f'El orden de los municipios con mas recuperados es: \n{Resultado}')
 # Ejercicio 17
 Resultado = data['Nombre departamento'].value_counts()
 print(f'El orden de los departamentos con mas contagios es: \n{Resultado}')
+
+# Ejercicio 18
+a = 'Sexo'
+b = 'Nombre departamento'
+c = 'Nombre municipio'
+Resultado = data.groupby([a, b, c, ]).size()
+print(f'El listado de contagiados por sexo y ciudad es: \n{Resultado}')
