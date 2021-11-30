@@ -101,5 +101,12 @@ Resultado = data.groupby([a, b, c, ]).size()
 print(f'El listado de contagiados por sexo y ciudad es: \n{Resultado}')
 
 # Ejercicio 19
-Resultado = data.groupby([a, b, c,]).mean()
+a = 'Sexo'
+b = 'Nombre departamento'
+c = 'Nombre municipio'
+Resultado = data.groupby([a, b, c, ]).mean()
 print(f'El promedio de edad en los municipios es: \n{Resultado}')
+
+# Ejercicio 20
+Resultado = data['Nombre del país'].value_counts()
+print(f'El orden de contagiados segun su procedencia es: \n{Resultado}')
