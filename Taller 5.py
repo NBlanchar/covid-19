@@ -99,3 +99,7 @@ b = 'Nombre departamento'
 c = 'Nombre municipio'
 Resultado = data.groupby([a, b, c, ]).size()
 print(f'El listado de contagiados por sexo y ciudad es: \n{Resultado}')
+
+# Ejercicio 19
+Resultado = data.groupby([a, b, c,]).mean()
+print(f'El promedio de edad en los municipios es: \n{Resultado}')
