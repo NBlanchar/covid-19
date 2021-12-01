@@ -124,3 +124,7 @@ print(f'El listado de contagiados por  edad ,sexo y ciudad es: \n{Resultado}')
 fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
 Resultado = fallecidos['Edad'].value_counts()
 print(f'El orden por edad con mas fallecidos es: \n{Resultado}')
+
+# Ejercicio 33
+print('Grafica Sexo')
+data['Sexo'].value_counts().plot.bar()
