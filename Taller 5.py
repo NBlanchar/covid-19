@@ -120,6 +120,10 @@ c = 'Nombre municipio'
 Resultado = data.groupby(['Sexo', c, ]).mean()
 print(f'El listado de contagiados por  edad ,sexo y ciudad es: \n{Resultado}')
 
+# Ejercicio 27
+print('Grafica contagiados, recuperados y fallecidos por fecha')
+data.groupby('Recuperado').size().cumsum().plot.bar()
+
 # Ejercicio 30
 fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
 Resultado = fallecidos['Edad'].value_counts()
@@ -131,7 +135,7 @@ data['Sexo'].value_counts().plot.bar()
 
 # Ejercicio 34
 print('Grafica Tipo de contagio')
-data['Tipo de contagio'].value_counts().plot.bar()
+data['Tipo de contagio'].value_counts().plot()
 
 # Ejercicio 35
 print('Grafica contagiados, recuperados y fallecidos por fecha')
