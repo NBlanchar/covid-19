@@ -125,10 +125,15 @@ fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
 Resultado = fallecidos['Edad'].value_counts()
 print(f'El orden por edad con mas fallecidos es: \n{Resultado}')
 
-# Ejercicio 32
+# Ejercicio 33
 print('Grafica Sexo')
 data['Sexo'].value_counts().plot.bar()
 
-# Ejercicio 33
+# Ejercicio 34
 print('Grafica Tipo de contagio')
 data['Tipo de contagio'].value_counts().plot.bar()
+
+# Ejercicio 35
+print('Grafica contagiados, recuperados y fallecidos por fecha')
+data.groupby(['Fecha de notificación', 'Recuperado']).size().plot.bar()
+
