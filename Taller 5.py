@@ -115,6 +115,11 @@ print(f'El orden de contagiados segun su procedencia es: \n{Resultado}')
 Resultado = data['Fecha de notificación'].value_counts()
 print(f'las fechas donde se presentaron mas contagios so: \n{Resultado}')
 
+# Ejercicio 26
+c = 'Nombre municipio'
+Resultado = data.groupby(['Sexo', c, ]).mean()
+print(f'El listado de contagiados por  edad ,sexo y ciudad es: \n{Resultado}')
+
 # Ejercicio 30
 fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
 Resultado = fallecidos['Edad'].value_counts()
