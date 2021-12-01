@@ -114,3 +114,8 @@ print(f'El orden de contagiados segun su procedencia es: \n{Resultado}')
 # Ejercicio 21
 Resultado = data['Fecha de notificación'].value_counts()
 print(f'las fechas donde se presentaron mas contagios so: \n{Resultado}')
+
+# Ejercicio 30
+fallecidos = data[(data['Recuperado'] == 'FALLECIDO')]
+Resultado = fallecidos['Edad'].value_counts()
+print(f'El orden por edad con mas fallecidos es: \n{Resultado}')
